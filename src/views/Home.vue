@@ -2,7 +2,6 @@
   <div class="home">
     <img class="home-logo" alt="logo" src="../assets/marcy.svg">
     <p class="name">Marcy</p>
-    <p class="connection">connection</p>
     <div class="home-profile">
       <a href="https://twitter.com/_marcy___" class="contact"><font-awesome-icon :icon="['fab','twitter']" /></a>
       <a href="https://github.com/MAAAARCY" class="contact"><font-awesome-icon :icon="['fab','github']" /></a>
@@ -45,9 +44,5 @@ export default {
 
 .name {
   font-size: 250%;
-}
-
-.connection {
-  font-size: 150%;
 }
 </style>
