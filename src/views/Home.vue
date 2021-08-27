@@ -1,11 +1,12 @@
 <template>
   <div class="home">
     <img class="home-logo" alt="logo" src="../assets/marcy.svg">
+    <p class="name">Marcy</p>
+    <p class="connection">connection</p>
     <div class="home-profile">
-      <p class="name">Marcy</p>
-      <ul>
-        <li>twitter: @_marcy___</li>
-      </ul>
+      <a href="https://twitter.com/_marcy___" class="contact"><font-awesome-icon :icon="['fab','twitter']" /></a>
+      <a href="https://github.com/MAAAARCY" class="contact"><font-awesome-icon :icon="['fab','github']" /></a>
+      <a href="https://www.youtube.com/channel/UCR2_LxRO2dsP-uSWI5Y2eFg" class="contact"><font-awesome-icon :icon="['fab','youtube']" /></a>
     </div>
   </div>
 </template>
@@ -32,19 +33,21 @@ export default {
 }
 
 .home-profile {
-  display: block;
+  display: inline-flex;
+  width: 30%;
+  justify-content: center;
 }
 
-.home-profile ul {
-  list-style: none;
-  display: inline-block;
-}
-
-.home-profile ul li{
-  text-align: left;
+.contact {
+  font-size: 2em;
+  padding: 0.3em;
 }
 
 .name {
+  font-size: 250%;
+}
+
+.connection {
   font-size: 150%;
 }
 </style>
