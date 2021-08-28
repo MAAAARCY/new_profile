@@ -4,7 +4,7 @@
     <p class="name">Marcy</p>
     <p class="location"><font-awesome-icon :icon="['fas','map-marker-alt']" /> NIT SNCT 4I</p>
     <div class="home-profile" v-for="(contact, key) in contacts" :key="contact.id">
-      <a href=contact.url v-on:mouseover="mouseOverAction(key)" v-on:mouseleave="mouseLeaveAction" class="contact"><font-awesome-icon :icon="['fab',contact.name]" /></a>
+      <a v-bind:href="contact_url" v-on:mouseover="mouseOverAction(key)" v-on:mouseleave="mouseLeaveAction" class="contact"><font-awesome-icon :icon="['fab',contact.name]" /></a>
     </div>
     <p v-if="hoverFlag">{{contact_message}}</p>
   </div>
@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       contact_message: "Twitter",
+      contact_url: "https://twitter.com/_marcy___",
       contacts: [
         { id: 0, url: 'https://twitter.com/_marcy___', name: 'twitter' },
         { id: 1, url: 'https://github.com/MAAAARCY', name: 'github' },
@@ -32,6 +33,7 @@ export default {
       this.hoverIndex = key;
       console.log(key);
       this.contact_message = this.contacts[key].name.charAt(0).toUpperCase() + this.contacts[key].name.slice(1);
+      this.contact_url = this.contacts[key].url;
     },
     mouseLeaveAction() {
       this.hoverFlag = false;
