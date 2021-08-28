@@ -31,7 +31,6 @@ export default {
     mouseOverAction(key) {
       this.hoverFlag = true;
       this.hoverIndex = key;
-      console.log(key);
       this.contact_message = this.contacts[key].name.charAt(0).toUpperCase() + this.contacts[key].name.slice(1);
       this.contact_url = this.contacts[key].url;
     },
