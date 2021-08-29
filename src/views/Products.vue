@@ -25,7 +25,7 @@ export default {
       products: [
         {
           id: 0,
-          link_url: "",
+          link_url: "/products",
           github_url: "https://github.com/MAAAARCY/new_profile",
           img_url: require('../assets/products/profile.png'),
           title: "Profile"
