@@ -5,7 +5,9 @@
       <router-link to="/products">Products</router-link>
       <router-link to="/works">Works</router-link>
     </div>
-    <router-view/>
+    <transition mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -35,5 +37,13 @@ body {
 
 #nav a.router-link-exact-active {
   color: #ffffff;
+}
+
+.v-enter-active, .v-leave-active {
+  transition: opacity .3s;
+}
+
+.v-enter, .v-leave-to {
+  opacity: 0;
 }
 </style>
