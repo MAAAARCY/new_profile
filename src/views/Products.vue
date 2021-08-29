@@ -6,7 +6,8 @@
         v-bind:title="`${product.title}`"
         v-bind:url="`${product.img_url}`"
         v-bind:linkUrl="`${product.link_url}`"
-        v-bind:githubUrl="`${product.github_url}`" class="product"/>
+        v-bind:githubUrl="`${product.github_url}`"
+        v-bind:description="`${product.description}`" class="product"/>
     </div>
   </div>
 </template>
@@ -28,6 +29,7 @@ export default {
           link_url: "/products",
           github_url: "https://github.com/MAAAARCY/new_profile",
           img_url: require('../assets/products/profile.png'),
+          description: "このサイト",
           title: "Profile"
         },
         {
@@ -35,6 +37,7 @@ export default {
           link_url: "https://maaaarcy.github.io/Typing-Adventurer/",
           github_url: "https://github.com/MAAAARCY/Typing-Adventurer-Project",
           img_url: require('../assets/products/TypingAdventurer.png'),
+          description: "自作タイピングゲーム",
           title: "Typing Adventurer"
         },
         {
@@ -42,6 +45,7 @@ export default {
           link_url: "https://www.slideshare.net/ShomaKobayashi/liverary",
           github_url: "/products",
           img_url: require('../assets/products/Liverary.png'),
+          description: "Open Hack U 2020 Online Vol.5出場作品",
           title: "Liverary"
         }
       ]

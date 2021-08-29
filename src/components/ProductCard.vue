@@ -2,6 +2,7 @@
     <div class="product">
         <img v-bind:src="url" class="product-img">
         <p class="product-title">{{ title }}</p>
+        <p class="product-description">{{ description }}</p>
         <a v-if="linkUrl !== '/products' " v-bind:href="linkUrl" class="product-url"><font-awesome-icon :icon="['fas','link']" /></a>
         <a v-if="githubUrl !== '/products' " v-bind:href="githubUrl" class="product-url"><font-awesome-icon :icon="['fab','github']" /></a>
     </div>
@@ -14,6 +15,7 @@ export default {
         url: String,
         linkUrl: String,
         githubUrl: String,
+        description: String
     },
 }
 </script>
@@ -24,7 +26,7 @@ export default {
   font-size: 2em;
   width: 350px;
   height: 300px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   border: solid 5px #000000;
   border-radius: 5px;
   background-color: #ffffff;
@@ -41,6 +43,12 @@ export default {
     margin: 0px;
     padding: 0px;
     font-size: 70%;
+}
+
+.product-description {
+    margin: 0px;
+    padding: 0px;
+    font-size: 50%;
 }
 
 .product-url {

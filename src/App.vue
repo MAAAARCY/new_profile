@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/products">Products</router-link>
-      <router-link to="/works">Works</router-link>
+      <!--<router-link to="/works">Works</router-link>-->
     </div>
     <transition mode="out-in">
       <router-view/>
