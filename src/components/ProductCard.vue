@@ -24,8 +24,6 @@ export default {
   font-size: 2em;
   width: 350px;
   height: 300px;
-  /margin-left: 50px;
-  /margin-right: 50px;
   padding-bottom: 80px;
   border: solid 5px #000000;
   border-radius: 5px;
