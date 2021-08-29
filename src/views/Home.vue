@@ -4,7 +4,7 @@
     <p class="name">Marcy</p>
     <p class="location"><font-awesome-icon :icon="['fas','map-marker-alt']" /> NIT SNCT 4I</p>
     <div class="home-profile" v-for="(contact, key) in contacts" :key="contact.id">
-      <a v-bind:href="contact_url" v-on:mouseover="mouseOverAction(key)" v-on:mouseleave="mouseLeaveAction" class="contact"><font-awesome-icon :icon="['fab',contact.name]" /></a>
+      <a v-bind:href="`${contact.url}`" v-on:mouseover="mouseOverAction(key)" v-on:mouseleave="mouseLeaveAction" class="contact"><font-awesome-icon :icon="['fab',contact.name]" /></a>
     </div>
     <p v-if="hoverFlag">{{contact_message}}</p>
   </div>
