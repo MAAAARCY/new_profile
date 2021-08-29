@@ -27,13 +27,16 @@ export default {
   /margin-left: 50px;
   /margin-right: 50px;
   padding-bottom: 80px;
-  border: solid 3px #000000;
+  border: solid 5px #000000;
+  border-radius: 5px;
   background-color: #ffffff;
 }
 
 .product-img {
     /width: 100%;
     /height: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .product-title {
