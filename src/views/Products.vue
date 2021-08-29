@@ -1,11 +1,12 @@
 <template>
   <div class="products">
     <h1>Marcy's Products</h1>
-    <div class="products-list" v-for="(product, key) in products" :key="product.id">
-      <p class="product">
-        <ProductCard :url="`${product.img_url}`" />
-        <a v-bind:href="`${product.url}`" v-on:mouseover="mouseOverAction(key)" v-on:mouseleave="mouseLeaveAction">{{ product.title }}</a>
-      </p>
+    <div class="products-list" v-for="(product, key) in products" :key="key">
+      <ProductCard
+        v-bind:title="`${product.title}`"
+        v-bind:url="`${product.img_url}`"
+        v-bind:linkUrl="`${product.link_url}`"
+        v-bind:githubUrl="`${product.github_url}`" class="product"/>
     </div>
   </div>
 </template>
@@ -24,31 +25,36 @@ export default {
       products: [
         {
           id: 0,
-          url: "",
+          link_url: "",
+          github_url: "https://github.com/MAAAARCY/new_profile",
           img_url: require('../assets/products/profile.png'),
           title: "Profile"
         },
         {
           id: 1,
-          url: "https://maaaarcy.github.io/Typing-Adventurer/",
+          link_url: "https://maaaarcy.github.io/Typing-Adventurer/",
+          github_url: "https://github.com/MAAAARCY/Typing-Adventurer-Project",
           img_url: require('../assets/products/TypingAdventurer.png'),
           title: "Typing Adventurer"
         },
         {
           id: 2,
-          url: "https://www.slideshare.net/ShomaKobayashi/liverary",
+          link_url: "https://www.slideshare.net/ShomaKobayashi/liverary",
+          github_url: "/products",
           img_url: require('../assets/products/Liverary.png'),
           title: "Liverary"
         }
       ]
     }
   },
+  /*
   methods: {
     mouseOverAction(key) {
       this.product_url = this.products[key].url;
     },
     mouseLeaveAction() {},
   }
+  */
 }
 </script>
 
@@ -59,16 +65,13 @@ export default {
 }
 
 .products-list {
-  display: inline-flex;
+  display: inline-block;
   justify-content: center;
 }
 
 .product {
-  font-size: 2em;
-  padding: 0.3em;
-  width: 350px;
-  text-decoration: none;
-  color: #ffffff;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .product-img {
