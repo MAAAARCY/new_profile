@@ -1,6 +1,6 @@
 <template>
     <div class="product">
-        <img v-bind:src="url" class="product-img">
+        <img v-bind:src="url" loading=”lazy” class="product-img">
         <p class="product-title">{{ title }}</p>
         <p class="product-description">{{ description }}</p>
         <a v-if="linkUrl !== '/products' " v-bind:href="linkUrl" class="product-url"><font-awesome-icon :icon="['fas','link']" /></a>
